@@ -11,7 +11,7 @@
 }
 
 .search-bar {
-  width: 50px;
+  width: 1000px;
   border: none;
   padding: 10px;
 }
@@ -27,4 +27,5 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }

@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Recipe from "./recipe";
+import axios from "axios";
 
 function App() {
   const APP_ID = "ebb46844";
@@ -15,6 +16,20 @@ function App() {
   useEffect(() => {
     getRecipes();
   }, [query]);
+
+  // const getRecipes = React.useEffect(() => {
+  //   axios
+  //     .get(
+  //       `search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`
+  //     )
+  //     .then(function (response) {
+  //       const data = response.json();
+  //       setRecipes(data.hits);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // });
 
   const getRecipes = async () => {
     const response = await fetch(
